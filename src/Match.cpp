@@ -1,6 +1,10 @@
 #include "Match.hh"
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <fstream>
+
+
 
 Match :: Match(){
     date_heure.day = 0;
@@ -43,7 +47,6 @@ void Match :: setWinner(bool i){
         winner = countryA;
     }
 }
-
 
 
 std::string Match :: getDate_heure(){

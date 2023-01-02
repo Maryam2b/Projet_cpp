@@ -1,5 +1,7 @@
 #include <string>
 #include "date.hh"
+#include <list>
+
 
 class Match{
 
@@ -21,6 +23,7 @@ std::string getDate_heure();
 std::string getCountryA();
 std::string getCountryB();
 std::string getWinner();
+
 
 /* Attributs */
 private:
