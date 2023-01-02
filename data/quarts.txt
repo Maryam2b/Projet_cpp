@@ -1,4 +1,4 @@
-Allemagne Argentine 30 06 2006 17 A
-Italie Ukraine 30 06 2006 21 A
-Angleterre Portugal 01 07 2006 17 B
-Brésil France 01 07 2006 21 B
+Allemagne Argentine 30 06 2006 17 0
+Italie Ukraine 30 06 2006 21 0
+Angleterre Portugal 01 07 2006 17 1
+Brésil France 01 07 2006 21 1
