@@ -166,9 +166,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>350</x>
-      <y>620</y>
+      <y>590</y>
       <w>200</w>
-      <h>160</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>Match
 --
@@ -177,8 +177,10 @@
 -pays2: string
 --
 /+Match()/
+/+setDate_heure(int)/
 /+setPays1(string)/
 /+setPays2(string)/
+/+setDate_heure(): int/
 /+getPays1(): string/
 /+getPays2(): string/</panel_attributes>
     <additional_attributes/>
@@ -191,10 +193,10 @@
       <w>170</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>MatchDeHuitieme
+    <panel_attributes>MatchDeHuitiemes
 --
 --
-/+MatchDeHuitieme()/
+/+MatchDeHuitiemes()/
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -206,10 +208,10 @@
       <w>170</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>MatchDeQuart
+    <panel_attributes>MatchDeQuarts
 --
 --
-/+MatchDeQuart()/</panel_attributes>
+/+MatchDeQuarts()/</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -235,10 +237,10 @@
       <w>170</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>MatchFinal
+    <panel_attributes>MatchFinale
 --
 --
-/+MatchFinal()/
+/+MatchFinale()/
 </panel_attributes>
     <additional_attributes/>
   </element>
