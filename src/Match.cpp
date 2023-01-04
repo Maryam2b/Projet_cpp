@@ -17,10 +17,11 @@ Match :: Match(){
     winner = "";
 }
 
-Match :: Match(std::string countryA, std::string countryB, int day, int month, int year, int time){ // rajouter le bool
+Match :: Match(std::string countryA, std::string countryB, int day, int month, int year, int time, bool i){ // rajouter le bool
     setDate_heure(day, month, year, time);
     setCountryA(countryA);
     setCountryB(countryB);
+    setWinner(i);
 }
 
 

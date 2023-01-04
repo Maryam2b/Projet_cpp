@@ -6,7 +6,9 @@
 #include <fstream>
 
 #include <list>
-#include "MatchDeHuitiemes.hh"
+// #include "Match.hh"
+#include "Les_Match.hh"
+
 
 using namespace std;
 
@@ -24,37 +26,25 @@ using namespace std;
 // }
 
 
-// TEST_CASE("2: Constructeur Match(...)"){ OKK
-//     MatchDeHuitiemes b("France","Maroc",11,11,2011,8);
-//     b.setWinner(0);
-//     REQUIRE(b.getCountryA() == "France");
-//     REQUIRE(b.getCountryB() == "Maroc");
-//     REQUIRE(b.getDate_heure() == "11/11/2011 à 8 heures");
-//     REQUIRE(b.getWinner() == "France");
-// }
+TEST_CASE("2: Constructeur Match(...)"){ 
+    Match b("France","Maroc",11,11,2011,8,0);
+    REQUIRE(b.getCountryA() == "France");
+    REQUIRE(b.getCountryB() == "Maroc");
+    REQUIRE(b.getDate_heure() == "11/11/2011 à 8 heures");
+    REQUIRE(b.getWinner() == "France");
+}
 
 TEST_CASE("3: le fichier","[huitiemes]")
 {
 }
 
-// TEST_CASE("4: Reactions","Reaction"){
-//   ifstream file("reactions.txt");
-//   list<Reaction> lesReactions;
-//   string s;
-//   ifstream res("res_reaction.txt");
-//   while(getline(file,s))
-//     {
-//       if(!s.empty())
-//         lesReactions.push_back(Reaction(s));
-//     }
-//   for(const  auto& iter : lesReactions)
-//     {
-//       getline(res,s);
-//       cout << iter.normalize() << endl;
-//       REQUIRE(s==iter.normalize());
-//     }
-//   res.close();
-//   file.close();
-// }
+TEST_CASE("4: Les Match","Les_Match"){
+    std::ifstream file("../data/quarts.txt");
+    Les_Match deuimilsix(file);
+    std::list<Match> lesmatch = deuimilsix.getLesMatch();
+    std::list<Match>::iterator it = lesmatch.begin();
+    std::cout << it->getCountryB() << std::endl;
+    file.close();
+}
 
 
