@@ -15,6 +15,7 @@ int main(){
     int month;
     int year;
     int time;
+    bool win;
     while(getline(file, line))
     { 
         std::stringstream ss(line);
@@ -24,6 +25,7 @@ int main(){
         ss >> month ;
         ss >> year ;
         ss >> time ;
+        ss >> win ;
         les_match.push_back(Match(countryA,countryB, day, month, year, time));
     }
 
