@@ -2,42 +2,37 @@
 #include <fstream>
 #include <sstream>
 
+
+#include "Restaurant.hh"
+#include "Bar.hh"
 #include "Les_Match.hh"
+#include "Salle.hh"
 
 int main(){
-    // std::list<Match> les_match;
-    // std::ifstream file("huitiemes.txt");
-    // std::string line;
-    // std::string countryA;
-    // std::string countryB;
-    // int day;
-    // int month;
-    // int year;
-    // int time;
-    // bool i;
-    // while(getline(file, line))
-    // { 
-    //     std::stringstream ss(line);
-    //     ss >> countryA ;
-    //     ss >> countryB ;
-    //     ss >> day ;
-    //     ss >> month ;
-    //     ss >> year ;
-    //     ss >> time ;
-    //     ss >> i ;
-    //     les_match.push_back(Match(countryA,countryB, day, month, year, time,i));
-    // }
-
-    // std::list<Match>::iterator it = les_match.begin();
-    // std::cout << it->getCountryB() << std::endl;
-    // file.close();
+    
 
     std::ifstream file("../data/quarts.txt");
-    Les_Match deuimilsix(file);
-    std::list<Match> lesmatch = deuimilsix.getLesMatch();
+    Les_Match deuxmilsix(file);
+    std::list<Match> lesmatch = deuxmilsix.getLesMatch();
     std::list<Match>::iterator it = lesmatch.begin();
     std::cout << it->getCountryB() << std::endl;
     file.close();
+
+    
+
+    Lieu leslieux( "Lafac", 10, "rue de mozart", 75012, 0, 20,2);
+    leslieux.affiche_lieu();
+
+    Bar bar( "Lafac", 10, "rue de mozart", 75012, 0, 20,2,2,true); // le deuxieme 2 est la superficie
+    
+    bar.affiche_lieu();
+    Restaurant resto( "Lafac", 10, "rue de mozart", 75012, 0, 20,2,2);
+    resto.affiche_lieu();
+
+    Salle salle( "Lafac", 10, "rue de mozart", 75012, 0, 20,2,2);
+    salle.affiche_lieu();
+    
+
 
     return 0;
 }

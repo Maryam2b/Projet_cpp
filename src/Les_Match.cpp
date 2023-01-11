@@ -22,10 +22,10 @@ Les_Match :: Les_Match(std::ifstream& file){
         ss >> i ;
         lesmatch.push_back(Match(countryA,countryB, day, month, year, time,i));
     }
-
+    /*
     std::list<Match>::iterator it = lesmatch.begin();
     std::cout << it->getCountryB() << std::endl;
-    file.close();
+    file.close();*/
 }
 
 std::list<Match> Les_Match :: getLesMatch(){

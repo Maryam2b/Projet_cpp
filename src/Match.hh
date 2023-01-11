@@ -8,7 +8,7 @@ class Match{
 public:
 /* Constructor */
 Match();
-Match();
+Match(std::string countryA, std::string countryB, int day, int month, int year, int time, bool i);
 
 /* Fonctions */
 
