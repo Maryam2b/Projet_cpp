@@ -3,7 +3,7 @@
 
 
 Mouse ::  Mouse(SDL_Renderer * renderer ){
-    cursorTexture = IMG_LoadTexture(renderer,"../data/mouse.png");
+    cursorTexture = IMG_LoadTexture(renderer,"../data/images/mouse.png");
       if( cursorTexture == NULL ) 
     {
         printf( "Unable to load image %s! SDL_image Error: %s\n", "mouse.png", IMG_GetError() );

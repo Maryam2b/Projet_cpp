@@ -1,16 +1,18 @@
 CC=g++
 CCFLAGS= -Wall -Werror -std=c++11 -g
-SRC_DIR=../src
-SRC= $(wildcard $(SRC_DIR)/*.cpp)
+INCLUDE = -I/usr/local/include/SDL2 
+LSDL2 = -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf
+SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 
-main : $(OBJ) 
-	$(CC) $(CCFLAGS)  -o $@ $^
+play : $(OBJ) 
+	$(CC) $(CCFLAGS) -o $@ $^ $(LSDL2)
 
 %.o: %.cpp
-	$(CC) $(CCFLAGS) -I$(SRC_DIR) -o $@ -c $<
+	$(CC) $(CCFLAGS) $(INCLUDE) -o $@ -c $< 
 
 clean :
-	rm -f $(OBJ) main
+	rm -f $(OBJ) play
 
 
+#g++ -Wall main.cpp -I/usr/local/include/SDL2 -L/usr/local/lib -o play -lSDL2 -lSDL2_image -lSDL2_ttf

@@ -1,0 +1,6 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Description de My Fanzone}{2}{section.2}%
+\contentsline {section}{\numberline {3}Installations requises}{2}{section.3}%
+\contentsline {section}{\numberline {4}Description de l'application}{2}{section.4}%
+\contentsline {section}{\numberline {5}Diaggramme UML}{2}{section.5}%

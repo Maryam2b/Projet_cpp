@@ -24,6 +24,11 @@ class Application{
         SDL_Surface * image;
         SDL_Texture* imageTexture;
         SDL_Rect imgRect;
+
+        SDL_Surface * image_matchs;
+        SDL_Rect imgmatchsRect;
+        SDL_Texture * image_matchsTexture;
+        
         SDL_Surface * pelouse;
         SDL_Texture* pelouseTexture;
         TTF_Font* police;

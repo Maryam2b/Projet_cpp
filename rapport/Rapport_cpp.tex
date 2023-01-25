@@ -1,0 +1,105 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{placeins}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{fancybox} % for shadow and Bitemize
+\usepackage{alltt}
+\usepackage{graphicx}
+\usepackage{longtable}
+%\usepackage{epsfig}
+%\usepackage{fullpage}
+%\usepackage{fancyhdr}
+%\usepackage{moreverb}
+%\usepackage{xspace}
+\usepackage[colorlinks,hyperindex,bookmarks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{epsf}
+\usepackage[affil-it]{authblk}
+\usepackage{blindtext}
+\usepackage{abstract}
+\usepackage{listings}
+\definecolor{blue}{RGB}{51,131,255}
+
+\usepackage{enumitem}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+  \put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+  \put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+\title{\LARGE{Projet c++ : Coupe du monde}}
+\author{Marilyne Mafo, Maryam Aarab\\MAIN 4\\Année universitaire 2022/2023}
+\date{\today}
+\makeatletter
+
+
+\begin{document}
+
+\begin{titlepage}
+	\enlargethispage{2cm}
+
+	\AddToShipoutPicture{
+	 	\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{Logo_Polytech_Sorbonne.png}}
+		\AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{Logo_Sorbonne_Université.png}}
+	}
+
+	\begin{center}
+		\vspace*{10cm}
+
+		\textsc{\@title}
+		\HRule
+		\vspace*{0.5cm}
+
+		\large{\@author} 
+	\end{center}
+
+	\vspace*{9.2cm}
+
+
+\end{titlepage}
+\ClearShipoutPicture
+\tableofcontents
+\newpage
+
+Point sur le rapport basés sur : \\
+- La mise en forme	\\
+- Install  \\
+- Description de l'appli	 \\
+- Fiertés \\
+- diag UML	\\ 
+
+\section{Introduction}
+
+Le thème "Coupe du monde" nous a évoqué beaucoup de choses qui tourner autour de la célébration lors des matchs tels que les rassemblement dans des fanzones, les feux d'artifices, les danses et les musiques créer autour de cet évènement mondial.
+
+
+\section{Description de My Fanzone}
+
+Notre projet consiste en la création d'une application nommée "My fanzone". Celle-ci offre à l'utilisateur un choix multiple de fanzones lui permettant de visualiser le match voulu avec des personnes partageant la même passion.
+En utilisant l'application, il pourra avoir accès aux informations de plusieurs fanzone tel que l'adresse, la superficie, le nombre d'écran, la restaurations offertes et si l'accès est payant.
+
+\section{Installations requises}
+
+\section{Description de l'application}
+
+\section{Diaggramme UML}
+
+
+
+
+
+\end{document}

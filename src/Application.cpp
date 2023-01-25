@@ -70,6 +70,13 @@
             std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
         }
 
+        //* Charge image de fond *//
+        image_matchs = IMG_Load("../data/images/matchs.png");
+        float aspect2 = (float)image_matchs->w / (float)image_matchs->h;
+        imgmatchsRect.w = 1800;
+        imgmatchsRect.h = (int)(400/aspect2);
+        image_matchsTexture = SDL_CreateTextureFromSurface(renderer, image_matchs);
+
         pelouse = IMG_Load("../data/images/pelouse.jpg");
         if (pelouse == NULL) {
             std::cout << "Impossible de charger l'image 'pelouse.jpg'\n";
@@ -121,12 +128,13 @@
 
 void Application :: Renderer(Mouse mouse){
         if(next_window){
+
         //* pour le boutton *//
-        SDL_Surface* buttonSurface = IMG_Load("../data/images/button.png");
-        SDL_Texture* buttonTexture = SDL_CreateTextureFromSurface(renderer, buttonSurface);
+        SDL_Surface * buttonSurface = IMG_Load("../data/images/button.png");
+        SDL_Texture * buttonTexture = SDL_CreateTextureFromSurface(renderer, buttonSurface);
         setButtonRect(500, 400, 500, 200);
             SDL_RenderClear(renderer);
-            SDL_RenderCopy(renderer, pelouseTexture, NULL, NULL);
+            SDL_RenderCopy(renderer, image_matchsTexture, NULL, NULL);
             SDL_RenderCopy(renderer, buttonTexture, NULL, &buttonRect);
             mouse.draw(renderer,mouseRect);
             SDL_RenderPresent(renderer);
