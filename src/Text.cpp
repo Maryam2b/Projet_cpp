@@ -36,6 +36,9 @@ SDL_Surface * Text :: getTextSurface(){
     return TextSurface;
 }
 
+SDL_Texture * Text :: getTextTexture(){
+    return TextTexture;
+}
 
 void Text :: draw(SDL_Renderer * renderer, SDL_Rect textRect){
     SDL_RenderCopy(renderer, TextTexture, NULL, &textRect);

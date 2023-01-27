@@ -5,12 +5,16 @@
 
 class Window{
     public :
-        Window();
+        Window(int weight, int height);
         ~Window();
         SDL_Window * getWindow();
         SDL_Renderer * getRenderer();
+        int getW();
+        int getH();
     private : 
         SDL_Window * window;
         SDL_Renderer * renderer;
+        int w;
+        int h;
 
 };

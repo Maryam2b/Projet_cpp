@@ -13,6 +13,7 @@ class Text: public Graphic {
         Text(std::string text,SDL_Color colors,int taille);
         void load(SDL_Renderer * renderer, const char * filepath);
         SDL_Surface * getTextSurface();
+        SDL_Texture * getTextTexture();
         void draw(SDL_Renderer * renderer, SDL_Rect textRect);
         void drawOnButton(SDL_Renderer * renderer, SDL_Rect sizeButton);
         std::string getS();

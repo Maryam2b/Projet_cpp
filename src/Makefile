@@ -1,7 +1,7 @@
 CC=g++
 CCFLAGS= -Wall -Werror -std=c++11 -g
 INCLUDE = -I/usr/local/include/SDL2 
-LSDL2 = -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf
+LSDL2 = -L/usr/local/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 

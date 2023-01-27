@@ -28,7 +28,7 @@ Les_Match :: Les_Match(std::ifstream& file){
     file.close();*/
 }
 
-std::list<Match> Les_Match :: getLesMatch(){
+std::vector<Match> Les_Match :: getLesMatch(){
     return lesmatch;
 }
 

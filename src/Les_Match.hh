@@ -18,12 +18,12 @@ Les_Match(std::ifstream& file);
 
 /* getter */
 
-std::list<Match> getLesMatch();
+std::vector<Match> getLesMatch();
 
 
 /* Attributs */
 private:
-    std::list<Match> lesmatch;
+    std::vector<Match> lesmatch;
 };
 
 

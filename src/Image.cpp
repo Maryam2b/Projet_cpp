@@ -23,3 +23,20 @@ void Image :: load(SDL_Renderer * renderer, const char * filepath){
 void Image :: draw(SDL_Renderer * renderer){
     SDL_RenderCopy(renderer, imageTexture, NULL, NULL);
 }
+
+
+void Image :: drawRectd(SDL_Renderer * renderer,SDL_Rect buttonRect){
+    imageRect.w = image->w/3;
+    imageRect.h = image->h/3;
+    imageRect.x = buttonRect.x + buttonRect.w - image->w + 130;
+    imageRect.y = buttonRect.y + 30 ;
+    SDL_RenderCopy(renderer, imageTexture, NULL, &imageRect);
+}
+
+void Image :: drawRectg(SDL_Renderer * renderer,SDL_Rect buttonRect){
+    imageRect.w = image->w/3;
+    imageRect.h = image->h/3;
+    imageRect.x = buttonRect.x - image->w  + 280;
+    imageRect.y = buttonRect.y + 30 ;
+    SDL_RenderCopy(renderer, imageTexture, NULL, &imageRect);
+}
