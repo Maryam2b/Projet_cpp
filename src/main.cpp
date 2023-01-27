@@ -21,6 +21,8 @@ using namespace std;
 
 int main(int argc, char *argv[]){
     Window wind;
+    size_t w= 1120;
+    size_t h= 640;
     SDL_Renderer * renderer = wind.getRenderer();
     SDL_Window * window = wind.getWindow();
 
@@ -46,8 +48,8 @@ int main(int argc, char *argv[]){
     textAccueil.load(renderer,"../data/fonts/CELEBRATE_RETRO.ttf");
     SDL_Surface * TextSurface = textAccueil.getTextSurface();
     SDL_Rect textRect;
-    textRect.x = (160 + TextSurface->w)/2;
-    textRect.y = (600 + TextSurface->h)/2;
+    textRect.x = (w*0.00001 + TextSurface->w)/2;
+    textRect.y = (h*0.5 + TextSurface->h)/2;
     textRect.w = TextSurface->w;
     textRect.h = TextSurface->h;
     ////
@@ -56,7 +58,7 @@ int main(int argc, char *argv[]){
     Text TextHuitieme("Quel match de huitiemes souhaitez vous voir ?", color,300);
     TextHuitieme.load(renderer,"../data/fonts/Imperfecta_Regular.ttf");
     SDL_Rect TextHuit;
-    TextHuit.x = 390;
+    TextHuit.x = w*0.22;
     TextHuit.y = 10;
     TextHuit.w = TextSurface->w;
     TextHuit.h = TextSurface->h/2;
@@ -68,16 +70,16 @@ int main(int argc, char *argv[]){
     std::vector<SDL_Rect> Rect_bouttons;
 
     for(int i = 0;i<4;i++){
-        Button boutton(350, y, 700, 120);
+        Button boutton(w*0.2, y, 700, 100);
         boutton.load(renderer, "../data/images/button.png");
         lesbouttonsHuit.push_back(boutton);
         Rect_bouttons.push_back(boutton.getButtonRect());
-        y+=180;
+        y+=130;
     }
 
-    Button nextd(1250,700, 70, 70);
+    Button nextd(w*0.9,h*0.8, 70,70);
     nextd.load(renderer, "../data/images/nextd.png");
-    Button nextg(30,700, 70, 70);
+    Button nextg(w*0.02,h*0.8, 70, 70);
     nextg.load(renderer, "../data/images/nextg.png");
    ////
 
@@ -119,6 +121,9 @@ int main(int argc, char *argv[]){
         mouseRect = mouse.update();
             switch(e.type)
             {
+                // case SDL_VIDEORESIZE:
+                //     window = SDL_SetVideoMode(e.resize.x, e.resize.y, 8, SDL_HWSURFACE | SDL_RESIZABLE);
+                //     break;
                 case SDL_QUIT:
                     keep_window_open = false;
                     break;
@@ -157,7 +162,7 @@ int main(int argc, char *argv[]){
             for(std::list<Button>::iterator it = lesbouttonsHuit.begin(); it != lesbouttonsHuit.end(); it ++){
                 it->draw(renderer);
             }
-            for(int i = 0; i <lesmatch_Affiche.size(); i++){
+            for(std::size_t i = 0; i <lesmatch_Affiche.size(); i++){
                 if(i<4){
                     lesmatch_Affiche[i].drawOnButton(renderer,Rect_bouttons[i]);
                 }
@@ -172,8 +177,8 @@ int main(int argc, char *argv[]){
             for(std::list<Button>::iterator it = lesbouttonsHuit.begin(); it != lesbouttonsHuit.end(); it ++){
                 it->draw(renderer);          
             }
-            int j = 0;
-            for(int i = 0; i < lesmatch_Affiche.size(); i++){
+            std::size_t j = 0;
+            for(std::size_t  i = 0; i < lesmatch_Affiche.size(); i++){
                 if(i>=4){
                     lesmatch_Affiche[i].drawOnButton(renderer,Rect_bouttons[j]);
                     j++;

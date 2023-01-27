@@ -13,7 +13,7 @@ Window :: Window(){
         window = SDL_CreateWindow("My Fanzone",
                                 SDL_WINDOWPOS_UNDEFINED,
                                 SDL_WINDOWPOS_UNDEFINED,
-                                1400, 800,
+                                1120, 640,
                                 0);
 
         if(!window)
