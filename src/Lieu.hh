@@ -8,7 +8,7 @@ struct adresse
     std::string rue = "" ;
     std::size_t code_p = 0;
    // std::string ville= "" ;
-   // std::string pays= "" ;   par défaut on sera toutes les fanzones sont à Paris en France
+   // std::string pays= "" ;   par défaut on dira que toutes les fanzones sont à Paris en France
 };
 
 class Lieu{
