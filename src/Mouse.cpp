@@ -10,8 +10,8 @@ Mouse ::  Mouse(SDL_Renderer * renderer ){
     }
     mouseRect.x = 0;
     mouseRect.y = 0;
-    mouseRect.w = 90;
-    mouseRect.h = 90;
+    mouseRect.w = 50;
+    mouseRect.h = 50;
 }
 
 

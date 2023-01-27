@@ -11,7 +11,7 @@ Match();
 Match(std::string countryA, std::string countryB, int day, int month, int year, int time, bool i);
 
 /* Fonctions */
-
+std::string Affichage();
 /* setter */
 void setDate_heure(int day, int month, int year, int time);
 void setCountryA(std::string country);

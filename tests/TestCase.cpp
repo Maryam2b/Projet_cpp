@@ -4,9 +4,19 @@
 #include "catch.hpp"
 #include <iostream>
 #include <fstream>
-
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
+#include <string>
 #include <list>
-// #include "Match.hh"
+#include "Window.hh"
+#include "Image.hh"
+#include "Text.hh"
+#include "Button.hh"
+#include "Mouse.hh"
 #include "Les_Match.hh"
 
 
@@ -46,5 +56,9 @@ TEST_CASE("4: Les Match","Les_Match"){
     std::cout << it->getCountryB() << std::endl;
     file.close();
 }
+
+// TEST_CASE("4: Classe Text","Text"){
+    
+// }
 
 

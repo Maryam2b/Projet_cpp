@@ -24,6 +24,9 @@ Match :: Match(std::string countryA, std::string countryB, int day, int month, i
     setWinner(i);
 }
 
+std::string Match :: Affichage(){
+    return countryA + " - " + countryB;
+}
 
 void Match :: setDate_heure(int day, int month, int year, int time){
     date_heure.day = day; 
