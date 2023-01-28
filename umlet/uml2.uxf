@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>50</y>
+      <w>190</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Button
+--
+-SDL_Surface* ButtonSurface
+-SDL_Texture* ButtonTexture
+-SDL_Rect buttonRect
+--
++Button(int x, int y, int w, int h)
++void load(SDL_Renderer * renderer, const char * filepath)
++void draw(SDL_Renderer * renderer)
++virtual ~Button(){}
++bool pressed(int x, int y)
++SDL_Rect getButtonRect()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>90</y>
+      <w>260</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Graphic
+--
+--
++virtual void load(SDL_Renderer * renderer, const char * filepath) = 0;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>230</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Image
+--
+-SDL_Surface * image
+-SDL_Texture* imageTexture
+--
++load(SDL_Renderer * renderer, const char * filepath)
++draw(SDL_Renderer * renderer)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>420</y>
+      <w>220</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Mouse
+--
+--
+SDL_Rect mouseRect
+SDL_Texture * cursorTexture
+Mouse(SDL_Renderer * renderer)
+SDL_Rect update() 
+void draw(SDL_Renderer * renderer, SDL_Rect mouseRect)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>400</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Window
+--
+-SDL_Window * window
+-SDL_Renderer * renderer
+--
++Window()
++~Window()
++SDL_Window * getWindow()
++SDL_Renderer * getRenderer()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>40</y>
+      <w>190</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Text
+--
+TTF_Font* police
+-string s
+-SDL_Color color
+-SDL_Surface* TextSurface
+-SDL_Texture* TextTexture
+-int size
+-SDL_Rect textRect
+--
++Text(std::string text,SDL_Color colors,int taille)
++void load(SDL_Renderer * renderer, const char * filepath)
++SDL_Surface * getTextSurface()
++void draw(SDL_Renderer * renderer, SDL_Rect textRect)
++void drawOnButton(SDL_Renderer * renderer, SDL_Rect sizeButton)
++string getS()
++virtual ~Text(){}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>120</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>140</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>120</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
