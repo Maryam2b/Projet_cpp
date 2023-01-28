@@ -8,6 +8,8 @@ Il est requis, ici, d'installer la librairie SDL2 pour accéder à l'interface g
 $brew install sdl2
 $brew installe sdl2_image
 $brew install sdl2_ttf
+$brew install sdl2_mixer
+
 ```
 
 - Sur Linux : 
@@ -16,11 +18,7 @@ $brew install sdl2_ttf
 $sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0
 ```
 
-- Sur Windows : 
 
-```
-$
-```
 
 
 ## Description
