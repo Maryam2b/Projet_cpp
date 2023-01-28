@@ -11,16 +11,16 @@ Window :: Window(int weight, int height){
         std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
     }
 
-///// Changer la dimension de votre fenêtre //// 
-    // std::cout << "Souhaitez vous changer la dimension de votre fenêtre ? 'OUI ou NON'" << std::endl;
-    // std::string choix;
-    // std::cin >> choix;
+/// Changer la dimension de votre fenêtre //// 
+    std::cout << "Souhaitez vous changer la dimension de votre fenêtre ? 'OUI ou NON'" << std::endl;
+    std::string choix;
+    std::cin >> choix;
 
-    // if(choix == "OUI"){
-    //     std::cout << "Saissisez les dimension w et h souhaitez : " << std::endl;
-    //     std::cin >> w;
-    //     std::cin >> h;
-    // }
+    if(choix == "OUI"){
+        std::cout << "Saissisez les dimension w et h souhaitez : " << std::endl;
+        std::cin >> w;
+        std::cin >> h;
+    }
 
 //* Créer la fenêtre *//
     window = SDL_CreateWindow("My Fanzone",
