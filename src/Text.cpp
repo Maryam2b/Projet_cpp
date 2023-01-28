@@ -14,10 +14,10 @@ void Text :: load(SDL_Renderer * renderer, const char * filepath){
     }
     police = TTF_OpenFont(filepath,size);
     if(police != NULL) {
-        std::cout << "ok à l'ouverture de CELEBRATE_RETRO.ttf" << std::endl;
+        // std::cout << "ok à l'ouverture de CELEBRATE_RETRO.ttf" << std::endl;
     }
     else{
-        std::cout << "foirage à l'ouverture de CELEBRATE_RETRO.ttf" << std::endl;
+        // std::cout << "foirage à l'ouverture de CELEBRATE_RETRO.ttf" << std::endl;
     }
 
     TextSurface = TTF_RenderText_Solid(police,s.c_str(), color);
@@ -46,12 +46,21 @@ void Text :: draw(SDL_Renderer * renderer, SDL_Rect textRect){
 
 
 void Text :: drawOnButton(SDL_Renderer * renderer, SDL_Rect sizeButton){
-    textRect.w = 300;
-    textRect.h = 70;
+    textRect.w = TextSurface->w;
+    textRect.h = TextSurface->h;
     textRect.x = sizeButton.x + (sizeButton.w - textRect.w)/ 2;
     textRect.y = sizeButton.y + (sizeButton.h - textRect.h) / 2;
     SDL_RenderCopy(renderer, TextTexture,NULL, &textRect);
 }
+
+void Text :: drawFanzoneButton(SDL_Renderer * renderer, int x, int y){
+    textRect.w = TextSurface->w;
+    textRect.h = TextSurface->h;
+    textRect.x = x+40;
+    textRect.y = y+40;    
+    SDL_RenderCopy(renderer, TextTexture,NULL, &textRect);
+}
+
 
 std::string Text :: getS(){
     return s;

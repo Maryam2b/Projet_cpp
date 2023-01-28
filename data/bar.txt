@@ -1,3 +1,0 @@
-The Long Hop 25 Rue Frédéric Sauton 75005 15 50 3 80 true
-Belushi's Paris 159 Rue de Crimée 75019 20 90 4 100 true
-Le Café des Sports  94 Rue de Ménilmontant 75020 15 50 3 80 false

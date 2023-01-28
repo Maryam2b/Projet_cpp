@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <list>
+#include <vector>
 
 #ifndef LIEU_HH
 #define LIEU_HH
@@ -21,12 +21,12 @@ Les_Lieux(std::ifstream& file);
 
 /* getter */
 
-std::list<Lieu> getLesLieux();
+std::vector<Lieu> getLesLieux();
 
 
 /* Attributs */
 private:
-    std::list<Lieu> leslieux;
+    std::vector<Lieu> leslieux;
 };
 #endif
 

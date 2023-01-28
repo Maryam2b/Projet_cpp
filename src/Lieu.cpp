@@ -15,7 +15,7 @@ Lieu:: Lieu(){
     nb_ecran= 0;
 }
 
-Lieu :: Lieu(std::string nom, std::size_t numero ,std::string rue, std::size_t code_p, float prix,std::size_t capacite, std::size_t nb_ecran ){
+Lieu :: Lieu(std::string nom, std::size_t numero ,std::string rue, std::size_t code_p, int prix,std::size_t capacite, std::size_t nb_ecran ){
     
     setNom(nom);
     setPrix(prix);
@@ -42,7 +42,7 @@ void Lieu::setNom(std::string n){
     nom = n;
 }
 
-void Lieu :: setPrix(float p){
+void Lieu :: setPrix(int p){
     prix= p;
 }
 
@@ -66,7 +66,7 @@ std::string Lieu:: getNom(){
     return nom;
 }
 
-float Lieu :: getPrix(){
+int Lieu :: getPrix(){
     return prix;
 }
 std::size_t Lieu :: getCapacite(){

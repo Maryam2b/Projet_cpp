@@ -7,7 +7,7 @@ Les_Lieux :: Les_Lieux(std::ifstream& file){
     std::size_t numero;
     std::string rue;
     std::size_t code_p;
-    float prix;
+    int prix;
     std::size_t capacite;
     std::size_t nb_ecran ;
     
@@ -27,7 +27,7 @@ Les_Lieux :: Les_Lieux(std::ifstream& file){
    
 }
 
-std::list<Lieu> Les_Lieux :: getLesLieux(){
+std::vector<Lieu> Les_Lieux :: getLesLieux(){
     return leslieux;
 }
 

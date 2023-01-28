@@ -9,7 +9,7 @@ class Interieur: public Lieu{
 public:
 /* Constructor */
 Interieur();
-Interieur(std::string nom,std::size_t numero,std::string rue,std::size_t code_p,float prix,std::size_t capacite, std::size_t nb_ecran, std::size_t s):Lieu(nom,numero,rue,code_p,prix,capacite,nb_ecran){setSuperficie(s);}
+Interieur(std::string nom,std::size_t numero,std::string rue,std::size_t code_p,int prix,std::size_t capacite, std::size_t nb_ecran, std::size_t s):Lieu(nom,numero,rue,code_p,prix,capacite,nb_ecran){setSuperficie(s);}
 
 /* Fonctions */
 
